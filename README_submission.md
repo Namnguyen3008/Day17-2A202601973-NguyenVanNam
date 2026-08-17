@@ -17,4 +17,12 @@ Student implementation tách đúng bốn lớp memory: short-term local, long-t
 
 ## Kiểm chứng
 
-Chạy `pytest`, seed Zep, benchmark student/no-memory và `compare_reports` trước khi nộp. Các số liệu hit rate, latency, token reduction và case có nhiều token nhất phải lấy trực tiếp từ `reports/benchmark.md`, không tự suy đoán hoặc ghi số liệu giả.
+Đã chạy `pytest`, seed Zep Cloud, benchmark student/no-memory và `compare_reports`.
+
+- Student: **11/11**, evidence hit rate **100.0%**, latency trung bình **753.4 ms**, token reduction trung bình **14.2%**.
+- No-memory: **2/11**, evidence hit rate **18.2%**.
+- Memory giúp tăng **9 case pass** và **81.8 điểm phần trăm hit rate**. Token reduction thấp hơn vì hệ thống giữ lại evidence cần thiết; giảm token mà không có evidence không phải là tối ưu.
+- Tất cả bốn lớp đều đạt **100%** trên các case của lớp tương ứng; không có lớp nào có hit rate thấp hơn. Case lấy nhiều token nhất là **E03 long-term: 1,445 tokens**.
+- E07 dùng đồng thời long-term và semantic: giữ preference `Python` cùng rule `Idempotency-Key`. E10 giữ được `REVIEW-DEADLINE-1600`, `Friday` và `16:00` sau compaction.
+
+Chi tiết số liệu và evidence nằm trong `reports/benchmark.md`, `reports/benchmark_no_memory.md` và `reports/comparison.md`.
