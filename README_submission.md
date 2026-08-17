@@ -26,3 +26,10 @@ Student implementation tách đúng bốn lớp memory: short-term local, long-t
 - E07 dùng đồng thời long-term và semantic: giữ preference `Python` cùng rule `Idempotency-Key`. E10 giữ được `REVIEW-DEADLINE-1600`, `Friday` và `16:00` sau compaction.
 
 Chi tiết số liệu và evidence nằm trong `reports/benchmark.md`, `reports/benchmark_no_memory.md` và `reports/comparison.md`.
+
+## Artefact minh chứng
+
+- [Long-term memory (E02/E03/E08/E09)](submission/long_term.png)
+- [Episodic memory (E04/E05)](submission/episodic.png)
+- [Semantic memory (E06/E11)](submission/semantic.png)
+- [Privacy drill: forget + verify-only](submission/privacy.png)
